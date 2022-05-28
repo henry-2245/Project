@@ -91,6 +91,10 @@ class Ui_Dialog(object):
         self.basketScrollArea = QScrollArea(self.widget)
         self.basketScrollArea.setObjectName(u"basketScrollArea")
         self.basketScrollArea.setGeometry(QRect(0, 0, 351, 331))
+        font4 = QFont()
+        font4.setFamilies([u"Calibri"])
+        font4.setPointSize(16)
+        self.basketScrollArea.setFont(font4)
         self.basketScrollArea.setStyleSheet(u"QScrollArea{\n"
 "	border: 6px inset #14C38E\n"
 "}\n"

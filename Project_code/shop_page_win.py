@@ -25,7 +25,7 @@ class Ui_Dialog(object):
             Dialog.setObjectName(u"Dialog")
         Dialog.resize(375, 728)
         Dialog.setStyleSheet(u"*{\n"
-"	font: 14pt \"Times New Roman\";\n"
+"	font: 14pt \"Calibri\";\n"
 "}\n"
 "\n"
 "QDialog{\n"
@@ -33,7 +33,7 @@ class Ui_Dialog(object):
 "}")
         self.shop_name = QLabel(Dialog)
         self.shop_name.setObjectName(u"shop_name")
-        self.shop_name.setGeometry(QRect(90, 20, 181, 51))
+        self.shop_name.setGeometry(QRect(90, 20, 171, 51))
         font = QFont()
         font.setPointSize(25)
         font.setBold(False)
@@ -111,7 +111,6 @@ class Ui_Dialog(object):
         self.toolButton.setObjectName(u"toolButton")
         self.toolButton.setGeometry(QRect(20, 20, 41, 41))
         self.toolButton.setStyleSheet(u"QToolButton{\n"
-"	\n"
 "	image: url(:/searchicon/icons8-left-arrow-26.png);\n"
 "}\n"
 "\n"

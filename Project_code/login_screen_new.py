@@ -23,11 +23,12 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(375, 730)
+        Dialog.resize(375, 732)
         Dialog.setStyleSheet(u"*{\n"
-"	background-color: rgb(57, 68, 84);\n"
+"	background-color: #C2DED1;\n"
 "	font-family: century gothic;\n"
 "}\n"
+"\n"
 "")
         self.label = QLabel(Dialog)
         self.label.setObjectName(u"label")
@@ -37,7 +38,7 @@ class Ui_Dialog(object):
         self.email.setObjectName(u"email")
         self.email.setGeometry(QRect(60, 350, 301, 41))
         self.email.setStyleSheet(u"font: 12pt \"MS Shell Dlg 2\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "border-bottom: 1px solid #717072")
         self.label_2 = QLabel(Dialog)
@@ -85,28 +86,28 @@ class Ui_Dialog(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	border-color: black;\n"
 "	background-color: rgb(80, 110, 125);\n"
+"	border: 4px solid green;\n"
 "}")
         self.password = QLineEdit(Dialog)
         self.password.setObjectName(u"password")
         self.password.setGeometry(QRect(60, 460, 301, 41))
         self.password.setStyleSheet(u"font: 12pt \"MS Shell Dlg 2\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "border-bottom: 1px solid #717072")
         self.label_4 = QLabel(Dialog)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(15, 300, 81, 41))
         self.label_4.setStyleSheet(u"font: 18pt \"century gothic\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "")
         self.label_5 = QLabel(Dialog)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(15, 410, 141, 31))
         self.label_5.setStyleSheet(u"font: 18pt \"century gothic\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "")
         self.invalid_login = QLabel(Dialog)

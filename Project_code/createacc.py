@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QDialog, QLabel, QLineEdit,
     QPushButton, QSizePolicy, QWidget)
-import logo
+import search
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -25,9 +25,11 @@ class Ui_Dialog(object):
             Dialog.setObjectName(u"Dialog")
         Dialog.resize(375, 730)
         Dialog.setStyleSheet(u"*{\n"
-"	background-color: rgb(57, 68, 84);\n"
+"	background-color: #C2DED1;\n"
 "	font-family: century gothic;\n"
+"	\n"
 "}\n"
+"\n"
 "")
         self.label = QLabel(Dialog)
         self.label.setObjectName(u"label")
@@ -37,7 +39,7 @@ class Ui_Dialog(object):
         self.email.setObjectName(u"email")
         self.email.setGeometry(QRect(60, 350, 301, 41))
         self.email.setStyleSheet(u"font: 12pt \"MS Shell Dlg 2\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "border-bottom: 1px solid #717072")
         self.label_2 = QLabel(Dialog)
@@ -52,7 +54,6 @@ class Ui_Dialog(object):
         self.createaccbutton.setObjectName(u"createaccbutton")
         self.createaccbutton.setGeometry(QRect(77, 660, 200, 61))
         font = QFont()
-        font.setFamilies([u"century gothic"])
         font.setBold(True)
         self.createaccbutton.setFont(font)
         self.createaccbutton.setStyleSheet(u"QPushButton{\n"
@@ -67,42 +68,42 @@ class Ui_Dialog(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	border-color: black;\n"
 "	background-color: rgb(80, 110, 125);\n"
+"	border: 4px solid green;\n"
 "}")
         self.password = QLineEdit(Dialog)
         self.password.setObjectName(u"password")
         self.password.setGeometry(QRect(60, 460, 301, 41))
         self.password.setStyleSheet(u"font: 12pt \"MS Shell Dlg 2\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "border-bottom: 1px solid #717072")
         self.label_4 = QLabel(Dialog)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(15, 300, 81, 41))
         self.label_4.setStyleSheet(u"font: 18pt \"century gothic\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "")
         self.label_5 = QLabel(Dialog)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(15, 410, 141, 31))
         self.label_5.setStyleSheet(u"font: 18pt \"century gothic\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "")
         self.label_6 = QLabel(Dialog)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(107, 230, 151, 56))
+        self.label_6.setGeometry(QRect(120, 230, 131, 56))
         self.label_6.setStyleSheet(u"font: 26pt \"century gothic\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "")
         self.confirmpass = QLineEdit(Dialog)
         self.confirmpass.setObjectName(u"confirmpass")
         self.confirmpass.setGeometry(QRect(60, 580, 301, 41))
         self.confirmpass.setStyleSheet(u"font: 12pt \"MS Shell Dlg 2\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "border-bottom: 1px solid #717072")
         self.label_7 = QLabel(Dialog)
@@ -113,7 +114,7 @@ class Ui_Dialog(object):
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(15, 530, 261, 31))
         self.label_8.setStyleSheet(u"font: 18pt \"century gothic\";\n"
-"color: white;\n"
+"color: black;\n"
 "border: none;\n"
 "")
         self.invalid = QLabel(Dialog)

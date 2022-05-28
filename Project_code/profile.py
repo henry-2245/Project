@@ -18,15 +18,19 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QLabel,
     QLineEdit, QPushButton, QSizePolicy, QToolButton,
     QWidget)
-import logo
+import search
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(375, 730)
+        Dialog.resize(375, 728)
         Dialog.setStyleSheet(u"*{\n"
 "	font-family: century gothic;\n"
+"}\n"
+"\n"
+"QDialog{\n"
+"	background-color: #DAE5D0;\n"
 "}\n"
 "\n"
 "")
@@ -84,14 +88,13 @@ class Ui_Dialog(object):
         self.save.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(111, 218, 156);\n"
 "	font-size: 24px;\n"
-"	border-width: 4px;\n"
 "	border-radius: 15px;\n"
 "	font-weight: bold;\n"
 "	color: white;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	border-color: black;\n"
+"	border: 1px solid black;\n"
 "	background-color: rgb(90, 190, 130);\n"
 "}")
         self.logout = QPushButton(Dialog)
@@ -109,8 +112,8 @@ class Ui_Dialog(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	border-color: black;\n"
 "	background-color: rgb(80, 110, 125);\n"
+"	border: 4px solid green;\n"
 "}")
         self.name = QLineEdit(Dialog)
         self.name.setObjectName(u"name")
@@ -148,19 +151,29 @@ class Ui_Dialog(object):
         self.home.setObjectName(u"home")
         self.home.setGeometry(QRect(10, 10, 41, 41))
         self.home.setStyleSheet(u"QToolButton{\n"
-"	image: url(:/logo/icons8-home-24.png);\n"
+"	image: url(:/searchicon/icons8-home-herry.png);\n"
 "	background-color: rgb(111, 218, 156);\n"
-"	border-width: 4px;\n"
 "	border-radius: 15px;\n"
-"	font-weight: bold;\n"
-"	color: white;\n"
 "}\n"
 "\n"
 "QToolButton:hover{\n"
-"	border-color: black;\n"
+"	border:1px solid black;\n"
 "	background-color: rgb(140, 238, 179)\n"
 "}\n"
 "")
+        self.home.raise_()
+        self.profilepic.raise_()
+        self.browsepic.raise_()
+        self.label_e.raise_()
+        self.label_a.raise_()
+        self.label_m.raise_()
+        self.label_n.raise_()
+        self.save.raise_()
+        self.logout.raise_()
+        self.name.raise_()
+        self.address.raise_()
+        self.mobile.raise_()
+        self.email.raise_()
 
         self.retranslateUi(Dialog)
 

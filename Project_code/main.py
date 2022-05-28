@@ -308,15 +308,42 @@ class Order_History(QDialog):
 
         self.ui = history.Ui_Dialog()
         self.ui.setupUi(self)
-        
 
         self.uid = auth.current_user['localId']
 
-        self.ui.orderBackButton.clicked.connect(self.gotoHome)
-        self.order_db = db.reference(f'Users/{self.uid}/Order').get()
-        print(self.order_db)
-        
+        self.ui.tableWidget.setRowCount(20)
+        self.ui.tableWidget.setColumnCount(3)
 
+        self.ui.tableWidget.setCurrentCell(0, 0)
+
+        self.ui.orderBackButton.clicked.connect(self.gotoHome)
+        self.pullOrder()
+        self.setData()
+
+    def pullOrder(self):
+        self.order_db = db.reference(f'Users/{self.uid}/Order').get()
+        dates = list(self.order_db)
+
+        shop = list(np.array(list(list(list(self.order_db.values())[
+            i].keys()) for i in range(len(dates)))).flatten())
+
+        item_temp = np.array(list(list(list(self.order_db.values())[
+                             i].values()) for i in range(len(dates))))
+        item_temp1 = list(list(item_temp[i][0].values())
+                          for i in range(len(item_temp)))
+        item = list(sum(item_temp1[i]) for i in range(len(item_temp1)))
+
+        data_temp = list([dates, shop, item])
+        self.data = {f'col{i+1}': data_temp[i] for i in range(len(data_temp))}
+        # print('self.data: ', self.data)
+
+    def setData(self):
+        for n, key in enumerate(sorted(self.data.keys())):
+            for m, item in enumerate(self.data[key]):
+                newitem = QTableWidgetItem()
+                newitem.setData(Qt.DisplayRole, item)
+                newitem.setTextAlignment(Qt.AlignCenter)
+                self.ui.tableWidget.setItem(m, n, newitem)
 
     def gotoHome(self):
         order = Order_History()
@@ -324,6 +351,8 @@ class Order_History(QDialog):
         widget.removeWidget(order)
         widget.addWidget(home)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+
+
 
 
 class ShopPage(QDialog):
@@ -583,7 +612,7 @@ class ShopPage(QDialog):
             self.addToBasketButton[i].setStyleSheet(u"text-align: left;")
             self.addToBasketButton[i].setFont(font4)
             self.addToBasketButton[i].setText(
-                "Add to Basket                    ฿" + str(self.item_price[i]))
+                "Add to Basket                                 ฿" + str(self.item_price[i]))
 
             layout_big[i].addWidget(self.addToBasketButton[i])
 

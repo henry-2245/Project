@@ -403,8 +403,7 @@ class Ui_Dialog(object):
         self.home_icon.setObjectName(u"home_icon")
         self.home_icon.setGeometry(QRect(210, 690, 141, 31))
         self.home_icon.setStyleSheet(u"QToolButton{\n"
-"	\n"
-"	image: url(:/searchicon/icons8-home-48 1.png);\n"
+"	image: url(:/searchicon/icons8-history-50.png);\n"
 "	background-color: white;\n"
 "	font: 11pt \"Segoe UI\";\n"
 "	border: 1px solid black;\n"
@@ -418,7 +417,6 @@ class Ui_Dialog(object):
 "}\n"
 "\n"
 "QToolButton:pressed{\n"
-"	image: url(:/searchicon/icons8-home-48.png);\n"
 "	background: #6D8B74;\n"
 "	border: 1px solid #D0C9C0;\n"
 "}")
